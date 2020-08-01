@@ -5,6 +5,7 @@
 <img src="https://trello-attachments.s3.amazonaws.com/5f25814e84f8d032b1941bf3/480x270/91ae845198fd3d0f9cc5e9e038358fe9/1465244_ed1a_3.jpg"/>
 
 <h3>- Course contents</h3>
+
 1. Lógica de programação: 
 
 2. JavaScript
