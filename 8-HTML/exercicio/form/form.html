@@ -1,0 +1,123 @@
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;    
+    }
+
+    :root {
+        font-size: 62.5%;
+    }    
+
+    .input-block {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 1rem;
+    }
+
+    .input-block label {
+        display: flex;
+        font-size: 16px;  
+    }
+
+    .input-block label:first-child,  {
+        margin-top: 1.6rem;
+    }
+    .input-block input[name="nome"],
+    .input-block input[name="senha"] {
+        padding: 1rem;
+    } 
+
+    .input-block input, textarea, select {
+        border: 0.9px solid rgba(218, 216, 216, 0.945);
+        border-radius: 1.6rem;
+
+        padding: 1rem;
+    }   
+    
+    .input-block textarea {
+        resize: vertical; 
+    }
+
+    select option:hover {
+        background-color: #f0f3fb;
+        border-radius: .4rem;
+    }
+
+    button {
+        border: none;
+        border-radius: .5rem;
+        padding: 1rem;
+
+        background-color: #7289DA;
+
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+
+        transition: background-color .2s;
+    }
+
+    button:hover {
+        background-color: #4f5f98;
+    }
+</style>
+
+<h1>Formulário</h1>
+
+<form action="http://localhost:3003/usuarios" method="GET">
+
+    <input type="hidden" name="id" value="3">
+
+    <div class="input-block login">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome">
+
+        
+    </div>
+
+    <div class="input-block">
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha">
+    </div>
+
+    <div class="input-block">
+        <label for="bio">Bio</label>
+        <textarea name="bio" cols="30" rows="10"></textarea>
+    </div>
+
+    <div class="input-block">
+        <div>
+            <input type="radio" name="tipo" value="admin"> Admin
+            <input type="radio" name="tipo" value="regular"> Regular
+            <input type="radio" name="tipo" value="professor"> Professor
+        </div>
+    </div>
+
+    <div class="input-block">
+        <input type="checkbox" name="ativo" title="Ativo"> 
+        <input type="checkbox" name="desativo" title="Desativo">  
+    </div>
+
+    <div class="input-block">
+        <select name="estado">
+            <option value="ac">Acre</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+        </select>
+    </div>
+
+    <div class="input-block">
+        <select name="interesses" multiple size=5>
+                <option value="js">Javascript</option>
+                <option value="java">Java</option>
+                <option value="php">Php</option>
+                <option value="go">Go</option>
+                <option value="c">C</option>
+        </select>
+    </div>
+
+    <button type="submit">Enviar</button>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+
+</form>

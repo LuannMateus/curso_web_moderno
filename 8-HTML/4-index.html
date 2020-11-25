@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.flaticon.com/br/premium-icon/icons/svg/2786/2786969.svg" type="image/x-icon">
+    <link rel="stylesheet" href="4-index.css">
+    <title>Exercícios | HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href wm-nav="./exercicio/texto1.html">01 - Texto 1</a>
+        <a href wm-nav="./exercicio/texto2.html">02 - Texto 2</a> 
+        <a href wm-nav="./exercicio/listas.html">03 - Listas</a>
+        <a href wm-nav="./exercicio/listaAninhada.html">04 - ListaAninhada</a> 
+        <a href wm-nav="./exercicio/links.html">05 - Links</a>
+        <a href wm-nav="./exercicio/tabela.html">06 - Tabela</a>
+        <a href wm-nav="./exercicio/form/form.html">07 - Formulário</a>
+        <a href wm-nav="./exercicio/imagens.html">08 - Imagens</a>  
+        <a href wm-nav="./exercicio/video.html">09 - Video</a>
+        <a href wm-nav="./exercicio/tagsNaoVisuais.html">10 - Tags não visuais</a>    
+    </nav>
+    <section id="conteudo">
+
+    </section>
+
+    <footer>
+        <p>Curso de Web Moderno</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function(event) {
+                
+                event.preventDefault()
+
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html, * {
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+
+            font-family: 'Oswald', sans-serif;
+
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .cabecalho {
+           background-color: rgba(0, 0, 0, 0.685);
+           height: 65px;
+           width: 100vw;
+
+           border-bottom: solid 2px #abc;
+        }
+
+        .logo {
+            padding: 10px 10px;
+            text-align: left;
+        }
+
+        .logo a img {
+            width: 220px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu {
+            
+            position: absolute;
+
+            float: left;
+
+            top: 12px;
+            left: 280px;
+        }
+
+        .menu ul li {
+            display: inline;
+            font-size: 1.3em;
+
+            padding: 12px 20px;
+        } 
+
+        .menu ul li a {
+            color: #fff;
+
+            text-decoration: none;        
+        }
+
+        .menu ul li:hover {
+            background-color: slateblue;
+            border-radius: 8px;
+        }
+
+        .autenticacao {
+            position: relative;
+
+            text-align: end;
+
+            bottom: 42px;
+
+            margin-right: 40px;
+
+        }
+
+        .autenticacao a {
+            color: #fff;
+
+            text-decoration: none;
+
+            padding-right: 3px;  
+        }
+
+        .autenticacao .botao {
+            padding: 8px 14px;
+
+            border-radius: 24px;
+        }
+
+        .autenticacao .botao.destaque {
+            background-color: rgba(255, 0, 0, 0.671);
+        }
+
+        .active {
+            background-color: slateblue;
+
+            border-radius: 6px;
+        }
+
+        @media (max-width: 800px) {
+            .autenticacao {
+                display: none;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+
+                position: absolute;
+                top: 18px;
+                left: 90vw;
+                
+                padding: 10px 18px;
+                background-color: rgba(128, 128, 128, 0.801);
+
+                border: none;
+                border-radius: 8px;
+
+                color: #fff;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio" onclick="logoSelect(event)">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li onclick="select(event)">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li onclick="select(event)">
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li onclick="select(event)">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li onclick="select(event)">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registar" class="botao destaque">Registrar</a>
+        </aside>
+    </header>
+
+    <script>
+
+        function select(event) {
+        
+            document.querySelectorAll('li').forEach(li => li.classList.remove('active'))
+
+            const atual = event.currentTarget
+            atual.classList.add('active')
+        } 
+
+        function logoSelect(event) {
+
+            document.querySelectorAll('li').forEach(li => li.classList.remove('active'))
+
+            const actual = document.querySelector('li')
+
+            actual.classList.add('active')
+        }
+        
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Acessando Atributos #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritório' data-urgencia="5">
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartável</li>
+        </ul>
+    </div>
+    <script>
+        const lista = document.querySelector('div ul[destino="escritório"]')
+        console.log('Elemento "ul"............')
+        console.log('ChildNodes: ', lista.childNodes)
+
+        // Não tem como usar notação ponto para pegar atributos personalizados.
+        console.log('destino', lista.destino) 
+
+        // É possível usar o getAttribute para pegar atributos personalizados.
+        console.log('destino', lista.getAttribute('destino')) ,
+
+        // Verificando se o atributo existe.
+        console.log('hasAttribute', lista.hasAttribute('destino')) 
+
+        // Mudando ou inserindo valores em atributos -setAttribute
+        lista.setAttribute('destino', 'empresa') // Atualizando o valor.
+        lista.setAttribute('status', 'aberto') // Criando um atributo.
+
+        // Removendo um atributo.
+        lista.removeAttribute('destino')
+
+        // DATASET - Padrão de atributos personalizados.
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        // Cuidado
+        const label = document.querySelector('label')
+        console.log(label.for) // Não tem como usar notação ponto para pegar atributos do sistema.
+        console.log(label.htmlFor) // Usando forma personalizada de pegar atributo do sistema.
+        console.log(label.getAttribute('for'))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+    background-color: aliceblue;
+    text-align: center;
+    font: 700 14px/1.5 'Nunito', sans-serif;
+}
+
+#conteudo {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0% 40%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    display: flex;
+
+    font: 800 15px/1.5 'Nunito', sans-serif;
+    border: none;
+    text-decoration: none;
+    padding: 6px;
+
+    margin-right: 5px;
+    box-sizing: border-box;
+    background-color: rgb(67, 157, 231);
+    color: rgba(255, 255, 255, 0.911);
+
+    border-radius: 24px; 
+
+    transition: background-color .2s;
+}
+
+nav a:hover {
+    background-color: rgba(51, 159, 246, 0.89);
+}
+
+main.active {
+    opacity: 0;
+}
