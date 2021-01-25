@@ -1,0 +1,26 @@
+.jumbotron {
+    background-color: #fff;
+    margin: 0;
+}
+
+.jumbotron .jumbotron-heading {
+    font-weight: 300;
+}
+
+
+footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 720px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 2px 0px;
+    }
+}
