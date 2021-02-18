@@ -1,14 +1,14 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Caneta BIC Preta",
-            "price": 5.98
-        }  ,
-        {
-            "id": 2,
-            "name": "Caneta BIC Azul",
-            "price": 5.98
-        }        
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC AP",
+      "price": 5.98
+    },
+    {
+      "name": "Computador - i7",
+      "price": "1350.12",
+      "id": 2
+    }
+  ]
 }
