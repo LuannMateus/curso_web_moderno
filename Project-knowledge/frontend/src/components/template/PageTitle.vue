@@ -2,14 +2,14 @@
   <div class="page-tile">
     <h1><i v-if="icon" :class="icon"></i> {{ main }}</h1>
     <h2>{{ sub }}</h2>
-    <hr>
+    <hr />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'PageTitle',
-  props: ['icon', 'main', 'sub']
+  name: "PageTitle",
+  props: ["icon", "main", "sub"],
 };
 </script>
 
