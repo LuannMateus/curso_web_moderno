@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <a href="#" class="toggle" @click="toggleMenu">
-      <i class="fa fa-lg" :class="icon"  v-if="!hideToggle"></i>
-    </a>
+    <button class="toggle" @click="toggleMenu" v-if="!hideToggle">  
+      <i class="fa fa-lg" :class="icon" ></i>
+    </button>
     <h1 class="title">
       <router-link to="/">
         {{ title }}
@@ -52,7 +52,7 @@ export default {
   color: #fff;
   font-weight: 100;
   flex-grow: 1;
-  text-align: center;
+  text-align: center;  
 }
 
 .title a {
@@ -60,10 +60,12 @@ export default {
   text-decoration: none;
 }
 
-header.header > a.toggle {
+header.header > button.toggle {
   width: 60px;
   height: 100%;
   color: #fff;
+  background: none;
+  border: none;
   justify-self: flex-start;
   text-decoration: none;
 
@@ -72,7 +74,7 @@ header.header > a.toggle {
   align-items: center;
 }
 
-header.header > a.toggle:hover {
+header.header > button.toggle:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 </style>

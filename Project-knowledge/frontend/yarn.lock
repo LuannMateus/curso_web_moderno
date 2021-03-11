@@ -5052,10 +5052,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-liquor-tree@0.2.32:
-  version "0.2.32"
-  resolved "https://registry.yarnpkg.com/liquor-tree/-/liquor-tree-0.2.32.tgz#e2ad120fcc4dc91daad9dac0289ba92a2896095b"
-  integrity sha512-5TEKeNlSX2JUKTEYhqzuJ2POprXsCfdU9cf26U3W5BAf7PSW5Prk4jAUXCOYc4guRPWLDgO6+qf05oqdiKc4Jw==
+liquor-tree@^0.2.70:
+  version "0.2.70"
+  resolved "https://registry.yarnpkg.com/liquor-tree/-/liquor-tree-0.2.70.tgz#451ec5a0041994f82f895f1fe47c8cc81a034845"
+  integrity sha512-5CiMlDVmuveYwwc27mYe1xZ3J4aHhZBErUhIp9ov4v4wIBso+s5JAByOOit4iOCMCQ5ODd8VggbKymzZREYbBQ==
 
 loader-fs-cache@^1.0.0:
   version "1.0.3"

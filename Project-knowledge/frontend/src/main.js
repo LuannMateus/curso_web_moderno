@@ -3,6 +3,9 @@ import Vue from 'vue';
 import 'font-awesome/css/font-awesome.css';
 import './config/bootstrap';
 import './config/msgs';
+import './config/liquor-tree';
+import './config/axios';
+import './config/mq'
 
 import store from './config/store';
 import router from './config/router';
